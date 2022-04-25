@@ -526,14 +526,20 @@
 
 	/* ===== 3. STEPS SECTION ===== */
 
-	.steps__item {
-		flex: 0 1 160px;
-	}
+	.steps {
 
-	.steps__items-block {
-		gap: 25px;
-	}
+		&__title {
+			font-size: 27px;
+		}
+		
+		&__item {
+			flex: 0 1 160px;
+		}
 
+		&__items-block {
+			gap: 25px;
+		}
+	}
 
 	/* ===== 4. BENEFTIS SECTION ===== */
 
@@ -549,21 +555,32 @@
 		}
 
 		&__title {
+			font-size: 30px;
 			padding: 0 30px;
 		}
 	}
 
+	/* ===== 5. INSTALL SECTION ===== */
 
-	/* ===== 6. QUESTIONS SECTION ===== */
-
-	.questions__item-body {
-		padding: 15px 15px 22px;
-	
-		&::before {
-			display: none;
-		}
+	.install__title {
+		font-size: 27px;
 	}
 
+	/* ===== 6. QUESTIONS SECTION ===== */
+	
+	.questions {
+		&__title {
+			font-size: 27px;
+		}
+
+		&__item-body {
+		padding: 15px 15px 22px;
+	
+			&::before {
+				display: none;
+			}
+		}
+	}
 
 	/* ===== 7. REGISTRATION SECTION ===== */
 
@@ -571,14 +588,23 @@
 
 		&__title {
 			padding: 0;
+			font-size: 33px;
 		}
 
 		&__col {
 			margin-bottom: 35px;
 		}
 	}
+	
+	/* ===== 8. FEEDBACK SECTION ===== */
+
+	.feedback__title {
+		font-size: 26px;
+	}
+
 }
 
+	
 
 /* ================== MAX-WIDTH: 479px ================== */
 /* ======================================================= */
@@ -586,11 +612,12 @@
 @media (max-width: 479px) {
 
 	.btn-registration {
+		ppadding: 4.175vw 0 0 0;
+		text-align: center;
 		width: 70.146vw;
 		height: 14.823vw;
 		border-radius: 0.835vw;
 		border: 0;
-		padding: 0px 3.549vw 1.461vw 1.670vw;
 		font-size: 3.549vw;
 		font-weight: 500;
 		letter-spacing: 0.188vw;
