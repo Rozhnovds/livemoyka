@@ -13,6 +13,10 @@ body {
   /* Необходим для переопределения свойства content-box у некоторых блоков*/
 }
 
+.hidden {
+  display: none;
+}
+
 .image {
   display: block;
   width: 100%;
@@ -502,7 +506,7 @@ body {
   flex-direction: column;
   max-width: 742px;
   margin: 40px auto 0;
-  /* по макету padding-left: 262px; */
+  /* по макету margin: 40px 0 0 262px; */
 }
 
 .questions__item {
@@ -518,6 +522,9 @@ body {
   align-items: center;
   padding: 0 15px 0 24px;
   height: 54px;
+}
+.questions__item-header:hover {
+  cursor: pointer;
 }
 .questions__item-title {
   font-size: 16px;

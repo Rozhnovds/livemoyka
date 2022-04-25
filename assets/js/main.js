@@ -1,3 +1,5 @@
+/* ===== HAMBURGER MENU ===== */
+
 const hamb = document.querySelector("#hamb");
 const nav = document.querySelector("#nav");
 const body = document.body;
@@ -28,3 +30,14 @@ function closeOnClick() {
   hamb.classList.remove("active");
   body.classList.remove("noscroll");
 }
+
+
+/* ===== ACCORDION ===== */
+
+const accordHeaders = document.querySelectorAll("[data-name='accordion-title']");
+
+accordHeaders.forEach(function (item) {
+	item.addEventListener('click', function() {
+		this.nextElementSibling.classList.toggle('hidden');
+	})
+})
