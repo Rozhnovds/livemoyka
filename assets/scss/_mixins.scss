@@ -1,0 +1,21 @@
+// ===== Convert Photoshop tracking into letter spacing =====
+
+@mixin l-spacing ( $tracking-psd, $font-size) {
+	letter-spacing: #{( $tracking-psd / 1000 * $font-size )}px;
+}
+// @include l-spacing ( 5, 15 );
+
+
+@mixin l-spacing-em ( $tracking-psd ) {
+	letter-spacing: #{( $tracking-psd / 1000 *1em )};
+}
+// @include l-spacing ( 5 );
+
+
+// ===== Convert Photoshop leading into line-height ===== 
+
+@mixin l-height ( $leading-psd, $font-size) {
+	line-height: #{ $leading-psd / $font-size };
+}
+// @include l-height ( 30, 15 );
+

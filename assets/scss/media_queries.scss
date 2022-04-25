@@ -1,0 +1,652 @@
+@use 'mixins' as *;
+
+
+/* ===================================================== */
+/* =================== MEDIA QUERIES =================== */
+/* ===================================================== */
+/* === max-width: 1299px, 991px, 767px, 575px, 479px === */
+
+
+
+/* ================== MAX-WIDTH: 1299px ================== */
+/* ======================================================= */
+
+@media (max-width: 1299px) {
+
+	/* ===== 1. HEADER ===== */
+	
+	.header {
+		padding: 10px 0 10px 0;
+	}
+
+
+	/* ===== 2. HERO SECTION ===== */
+
+	.hero {
+		background: url(../img/bg_top.png) -220px 10px/cover no-repeat;
+	}
+
+
+	/* ===== 4. BENEFITS SECTION ===== */
+	
+		.benefits {
+			padding: 110px 0 121px 0;
+		
+			&__picture {
+				display: flex;
+				align-items: center;
+				padding-right: 16px;
+			}
+	
+			&__title {
+				margin-bottom: 16px;
+			}
+	
+			&__item {
+				padding: 0px 15px 0 15px;
+			}
+		}
+
+
+	/* ===== 7. REGISTRATION SECTION ===== */
+
+	.registration {
+		padding: 64px 0 50px 0;
+		margin-bottom: 30px;
+
+		&__col-header {
+			padding: 5px 0 16px;
+		}
+	}
+		
+
+	/* ===== 8. FEEDBACK SECTION ===== */
+
+	.feedback {
+		padding: 93px 0 169px;
+
+		&__card--hide {
+			display: none;
+		}
+
+		&__block {
+			justify-content: center;
+			gap: 10%;
+			margin: 47px 0 0 0;
+		}
+	}
+
+
+/* ===== 9. FOOTER ===== */
+
+	.footer {
+		padding: 0 0 3vw 0;
+		
+		&__nav {
+			margin: 23px 0 0 0;
+		}
+	}
+
+}
+
+
+/* ================== MAX-WIDTH: 991px ================== */
+/* ======================================================= */
+
+@media (max-width: 991px) {
+
+	/* ===== 1. HEADER ===== */
+	
+	.header {
+		height: 77px;
+	
+		&__logo {
+			position: absolute;
+			left: 15px;
+			top: 10px;
+		}
+
+		&__nav {
+			position: fixed;
+			z-index: 2;
+			right: -100%;
+			top: 66px;
+			width: 100%;
+			height: 100%;
+			margin-top: 10px;
+			padding: 0;
+			transition: 0.3s;
+			overflow: auto;
+		}
+
+		&__nav.open {
+			right: 0;
+		}
+
+		&__hamb {
+			position: absolute;
+			right: 30px;
+			top: 28px;
+		}
+	}
+	
+	.hamb {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		width: 35px;
+		height: 25px;
+	
+		&__bar {
+			display: block;
+			width: 100%;
+			height: 3px;
+			border-radius: 10px;
+			background-color: #1f78df;
+			transition: 0.2s;
+		}
+	}
+
+	.hamb.active .hamb__bar {
+
+		&:nth-child(1) {
+			transform: translateY(8px) rotate(45deg);
+			transform-origin: 10px 3px;
+		}
+
+		&:nth-child(2) {
+			opacity: 0;
+		}
+
+		&:nth-child(3) {
+			transform: translateY(-8px) rotate(-45deg);
+		}
+	}
+
+	.nav {
+		background-color: white;
+
+		&__menu {
+			flex-direction: column;
+			text-align: center;
+			padding-top: 20px;
+		}
+		
+		&__item {
+			width: 100%;
+			font-size: 15px;
+			font-weight: 300;
+			@include l-spacing ( 25, 15 );
+
+			&:hover {
+				background-color: #d7e6fd;
+		
+			}
+		}
+	
+		&__link {
+			display: block;
+			width: 100%;
+			font-size: 25px;
+    		line-height: 55px;
+	
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+
+	body.noscroll {
+		overflow: hidden;
+	}
+
+
+	/* ===== 2. HERO SECTION ===== */
+
+	.hero {
+		padding: 34px 0 140px 0;
+		background: url(../img/bg_top.png) -220px 0/cover no-repeat;
+
+		&__middle-block {
+			margin-top: 30px;
+		}
+
+		&__content {
+			flex: 0 0 460px;
+		}
+
+		&__picture {
+			padding: 50px 0px 0px 22px;
+		}
+
+		&__desc {
+			padding: 30px 0 0 0px;
+
+			&::before {
+				display: none;
+			}
+		}
+
+		&__title {
+			padding: 0;
+			font-size: 50px;
+			&--hl {
+				font-size: 59px;
+			}
+		}
+	}
+
+
+	/* ===== 3. STEPS SECTION ===== */
+
+	.steps {
+		padding: 55px 0 75px 0;
+
+		&__item-title {
+			text-align: center;
+			font-size: 16px;
+		}
+	}
+	
+
+	/* ===== 4. BENEFTIS SECTION ===== */
+
+	.benefits {
+		padding: 90px 0 121px 0;
+
+		&__inner {
+			flex-wrap: wrap-reverse	;
+		}
+
+		&__content {
+			flex: 1 1 100%;
+		}
+
+		&__picture {
+			flex: 1 1 100%;
+			justify-content: center;
+			padding: 0;
+			margin-top: 50px;
+		}
+
+		&__title {
+			text-align: center;
+			margin-bottom: 45px;
+		}
+
+		&__item {
+			display: flex;
+			max-width: 550px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+
+	/* ===== 5. INSTALL SECTION ===== */
+
+	.install {
+		padding: 65px 0 65px 0;
+		
+		&__block {
+			margin-top: 40px;
+		}
+	}
+
+
+	/* ===== 6. QUESTIONS SECTION ===== */
+
+	.questions {
+		padding: 90px 0 110px 0;
+
+		&__item-body {
+		padding: 14px 50px 22px 61px;
+    	text-align: justify;
+		}
+	}
+
+
+	/* ===== 7. REGISTRATION SECTION ===== */
+
+	.registration {
+
+		&__row {
+			flex-wrap: wrap;
+			margin-left: 0;
+		}
+
+		&__col {
+			flex: 1 1 100%;
+		}
+
+		&__col-2 {
+			flex: 1 1 100%;
+			display: flex;
+			justify-content: center;	
+		}
+
+		&__col-body {
+			padding: 0px 27px 25px;
+		}
+	}
+
+	
+	/* ===== 8. FEEDBACK SECTION ===== */
+
+	.feedback {
+		padding: 93px 0 200px;
+
+		
+
+		&__card-header {
+			padding: 27px 30px 0 30px;
+		}
+	
+		&__card-body-response {
+			padding: 0px 30px;
+
+			&::before {
+				display: none;
+			}
+		}	
+	
+		&__card-footer {
+			padding: 0 0 33px 30px;
+		}
+	}
+	
+	
+	/* ===== 9. FOOTER ===== */
+
+	
+	.footer__inner {
+		display: none;
+	}
+}
+
+
+
+/* ================== MAX-WIDTH: 767px ================== */
+/* ======================================================= */
+
+@media (max-width: 767px) {
+
+	/* ===== 2. HERO SECTION ===== */
+
+	.hero {
+		padding: 20px 0 110px 0;
+		background: url(../img/bg_top.png) -205px 0/cover no-repeat;
+
+		&__top-block {
+			flex-wrap: wrap;
+		}
+
+		&__location {
+			margin-right: 0;
+			flex: 0 0 100%
+		}
+		
+		&__benefits {
+			padding: 20px 0 0 0;flex: 0 1 445px;
+		}
+		
+		&__middle-block {
+			margin-top: 20px;
+		}
+		
+		&__picture {
+			display: none;
+		}
+	}
+	
+
+	/* ===== 3. STEPS SECTION ===== */
+
+	.steps {
+
+		&__items-block {
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 30px;
+		}
+
+		&__items-block-line {
+			display: none;
+		}
+	}
+
+
+	/* ===== 5. INSTALL SECTION ===== */
+
+	.install {
+		padding: 55px 0 45px 0;
+
+		&__title {
+			font-size: 30px;
+		}
+
+		&__block {
+			flex-wrap: wrap;
+		}
+
+		&__video {
+			margin-bottom: 20px;
+		}
+	}
+
+
+	/* ===== 6. QUESTIONS SECTION ===== */
+
+	.questions {
+
+		&__item-title {
+			font-size: 15px;
+		}
+
+		&__item-icon {
+			margin-left: 15px;
+		}
+	}
+
+
+	/* ===== 7. REGISTRATION SECTION ===== */
+
+	.registration {
+
+		&__title {
+			padding: 0 70px;
+		}
+
+		&__col {
+			margin-bottom: 20px;
+		}
+	}
+
+
+	/* ===== 8. FEEDBACK SECTION ===== */
+	
+	.feedback {
+		padding: 93px 0 180px;
+
+		&__card--hide-2 {
+			display: none;	
+		}
+
+		&__card-header {
+			padding: 27px 28px 0 31px;
+		}
+	
+		&__card-body-response {
+			padding: 0px 33px 0 73px;
+	
+			&::before {
+				display: inline-block;
+			}
+		}	
+	
+		&__card-footer {
+			padding: 0 0 33px 73px;
+		}
+	}
+}
+
+
+/* ================== MAX-WIDTH: 575px ================== */
+/* ======================================================= */
+
+@media (max-width: 575px) {
+
+	/* ===== 2. HERO SECTION ===== */
+
+	.hero {
+
+		&__benefits {
+			display: none;
+		}
+
+		&__content {
+			flex: 1 1 auto;
+		}
+	
+		&__title {
+			font-size: 36px;
+		}
+	
+		&__title--hl {
+			font-size: 44px;
+			line-height: 50px;
+		}
+	
+		&__desc {
+			padding: 30px 0 0 0px;
+		}
+	}
+
+
+	/* ===== 3. STEPS SECTION ===== */
+
+	.steps__item {
+		flex: 0 1 160px;
+	}
+
+	.steps__items-block {
+		gap: 25px;
+	}
+
+
+	/* ===== 4. BENEFTIS SECTION ===== */
+
+	.benefits {
+
+		&__item {
+			padding: 15px;
+			min-height: 53px;
+		}
+
+		&__item-title {
+			font-size: 15px;
+		}
+
+		&__title {
+			padding: 0 30px;
+		}
+	}
+
+
+	/* ===== 6. QUESTIONS SECTION ===== */
+
+	.questions__item-body {
+		padding: 15px 15px 22px;
+	
+		&::before {
+			display: none;
+		}
+	}
+
+
+	/* ===== 7. REGISTRATION SECTION ===== */
+
+	.registration {
+
+		&__title {
+			padding: 0;
+		}
+
+		&__col {
+			margin-bottom: 35px;
+		}
+	}
+}
+
+
+/* ================== MAX-WIDTH: 479px ================== */
+/* ======================================================= */
+
+@media (max-width: 479px) {
+
+	.btn-registration {
+		width: 70.146vw;
+		height: 14.823vw;
+		border-radius: 0.835vw;
+		border: 0;
+		padding: 0px 3.549vw 1.461vw 1.670vw;
+		font-size: 3.549vw;
+		font-weight: 500;
+		letter-spacing: 0.188vw;
+		color: white;
+		text-decoration: none;
+	
+		&__icon {
+			display: none;
+		}
+	}
+
+	.logo__desc {
+		display: none;
+	}
+
+
+	/* ===== 4. BENEFTIS SECTION ===== */
+
+	.benefits__title {
+		padding: 0;
+	}
+
+
+	/* ===== 7. REGISTRATION SECTION ===== */
+
+	.registration {
+
+		&__title {
+			padding: 0;
+		}
+
+		&__col-body {
+			padding: 0px 0 25px;
+		}
+	}
+
+
+	/* ===== 8. FEEDBACK SECTION ===== */
+
+	.feedback {
+		padding: 93px 0 200px;
+
+		&__card-header {
+			padding: 27px 30px 0 30px;
+		}
+	
+		&__card-body-response {
+			padding: 0px 30px;
+
+			&::before {
+				display: none;
+			}
+		}	
+	
+		&__card-footer {
+			padding: 0 0 33px 30px;
+		}
+	}
+}
