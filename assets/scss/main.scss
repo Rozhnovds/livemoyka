@@ -631,11 +631,6 @@ body {
 		font-weight: 500;
 	}
 
-	&-icon {
-		width: 22px;
-		height: 22px;
-	}
-
 	&-body {
 		position: relative;
 		padding: 14px 32px 22px 61px;
@@ -656,8 +651,31 @@ body {
     		left: 23px;
 		}
 	}
+
+	&-icon {
+		width: 22px;
+		height: 22px;
+		transition: 0.3s;
+		
+		&--up {
+			transition: 0.3s;
+			transform: rotate(180deg); 
+		}
+	}
 }
 
+.svg-arrow {
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	color: #23A328;
+	fill: white;
+
+	&--up {
+		color: #116ED6;
+	}
+	
+}
 
 /* ===== 7. REGISTRATION SECTION ===== */
 

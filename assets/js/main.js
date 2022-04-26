@@ -35,19 +35,48 @@ function closeOnClick() {
 /* ===== ACCORDION ===== */
 
 const accordHeaders = document.querySelectorAll("[data-name='accordion-title']");
+const accordBodies = document.querySelectorAll("[data-name='accordion-body']");
+const accordIconWrappers = document.querySelectorAll("[data-name='accordion-icon-wrapper']");
+const accordIcons = document.querySelectorAll("[data-name='accordion-icon']");
 
 accordHeaders.forEach(function (item) {
 	item.addEventListener('click', function() {
-		this.nextElementSibling.classList.toggle('hidden');
-
-		const accordImage = this.querySelector('.image');
-		const imageSource  = accordImage.getAttribute('src');
 		
-		if(imageSource == 'assets/icons/up.svg'){
-			accordImage.setAttribute('src', 'assets/icons/down.svg');
+		if(this.nextElementSibling.classList.contains('hidden')) {
+
+		/* скрываем все accordBodies */
+		accordBodies.forEach(function (item) {
+			item.classList.add('hidden');
+		})
+		/* меняем все иконки на down */
+		accordIcons.forEach(function (item) {
+			item.classList.remove('svg-arrow--up');
+		})
+
+		accordIconWrappers.forEach(function (item) {
+			item.classList.remove('questions__item-icon--up');
+		})
+
+		this.nextElementSibling.classList.remove('hidden');
+
+		const currentWrapper = this.querySelector("[data-name='accordion-icon-wrapper']");
+		const currentIcon= this.querySelector("[data-name='accordion-icon']");
+		
+		currentWrapper.classList.add('questions__item-icon--up');
+		currentIcon.classList.add('svg-arrow--up');
 
 		} else {
-			accordImage.setAttribute('src', 'assets/icons/up.svg');	
-		}	
+
+			this.nextElementSibling.classList.add('hidden');
+			const currentWrapper = this.querySelector("[data-name='accordion-icon-wrapper']");
+			const currentIcon= this.querySelector("[data-name='accordion-icon']");
+			currentWrapper.classList.remove('questions__item-icon--up');
+			currentIcon.classList.remove('svg-arrow--up');
+		}
 	})
 }) 
+
+
+
+
+

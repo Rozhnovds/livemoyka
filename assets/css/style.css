@@ -530,10 +530,6 @@ body {
   font-size: 16px;
   font-weight: 500;
 }
-.questions__item-icon {
-  width: 22px;
-  height: 22px;
-}
 .questions__item-body {
   position: relative;
   padding: 14px 32px 22px 61px;
@@ -553,6 +549,26 @@ body {
   position: absolute;
   top: 23px;
   left: 23px;
+}
+.questions__item-icon {
+  width: 22px;
+  height: 22px;
+  transition: 0.3s;
+}
+.questions__item-icon--up {
+  transition: 0.3s;
+  transform: rotate(180deg);
+}
+
+.svg-arrow {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  color: #23A328;
+  fill: white;
+}
+.svg-arrow--up {
+  color: #116ED6;
 }
 
 /* ===== 7. REGISTRATION SECTION ===== */
