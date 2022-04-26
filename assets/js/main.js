@@ -39,5 +39,15 @@ const accordHeaders = document.querySelectorAll("[data-name='accordion-title']")
 accordHeaders.forEach(function (item) {
 	item.addEventListener('click', function() {
 		this.nextElementSibling.classList.toggle('hidden');
+
+		const accordImage = this.querySelector('.image');
+		const imageSource  = accordImage.getAttribute('src');
+		
+		if(imageSource == 'assets/icons/up.svg'){
+			accordImage.setAttribute('src', 'assets/icons/down.svg');
+
+		} else {
+			accordImage.setAttribute('src', 'assets/icons/up.svg');	
+		}	
 	})
-})
+}) 
